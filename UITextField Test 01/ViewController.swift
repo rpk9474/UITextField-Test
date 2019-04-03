@@ -34,8 +34,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         myTextField.resignFirstResponder()
     }
     
+    // MARK: - UITextFieldDelegate Method
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         myTextField.resignFirstResponder()
+        return true
+    }
+    
+    public func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        
+        // 텍스트 박스 클리어 누를 시 변경
+        myTextField.backgroundColor = UIColor.yellow
         return true
     }
     
